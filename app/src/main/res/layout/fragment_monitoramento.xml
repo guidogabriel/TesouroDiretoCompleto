@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.guidogabriel.tesourodiretocompleto.fragments.MonitoramentoFragment">
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Taxas da NTNBP35" />
+
+    <EditText
+        android:id="@+id/et_menor_que"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menor que" />
+
+    <EditText
+        android:id="@+id/et_maior_que"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Maior que" />
+
+
+</LinearLayout>

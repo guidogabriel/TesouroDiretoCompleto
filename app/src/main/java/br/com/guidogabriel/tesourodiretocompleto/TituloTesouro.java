@@ -5,20 +5,58 @@ import com.orm.SugarRecord;
 /**
  * Created by guido_000 on 01/05/2015.
  */
-public class TituloTesouro extends SugarRecord<TituloTesouro>{
+public class TituloTesouro extends SugarRecord<TituloTesouro> {
+
+
+    private Long idRemoto;
     private String nome;
     private String precoCompra;
     private String taxaCompra;
+    private String dataUltimaAtualizacao;
+    private String precoVenda;
+    private String taxaVenda;
 
-    //Testando no Github
+    //region Contrutores
+    public TituloTesouro() {
+    }
 
-    public TituloTesouro(String nome, String precoCompra, String taxaCompra) {
+    public TituloTesouro(long idRemoto, String nome, String precoCompra, String taxaCompra) {
+        this.idRemoto = idRemoto;
         this.nome = nome;
         this.precoCompra = precoCompra;
         this.taxaCompra = taxaCompra;
     }
+    //endregion
 
-    public TituloTesouro() {}
+    @Override
+    public String toString() {
+        return nome;
+    }
+
+    //region Getters and Setters
+    public String getPrecoVenda() {
+        return precoVenda;
+    }
+
+    public void setPrecoVenda(String precoVenda) {
+        this.precoVenda = precoVenda;
+    }
+
+    public String getTaxaVenda() {
+        return taxaVenda;
+    }
+
+    public void setTaxaVenda(String taxaVenda) {
+        this.taxaVenda = taxaVenda;
+    }
+
+    public Long getIdRemoto() {
+        return idRemoto;
+    }
+
+    public void setIdRemoto(Long idRemoto) {
+        this.idRemoto = idRemoto;
+    }
 
     public String getNome() {
         return nome;
@@ -43,4 +81,13 @@ public class TituloTesouro extends SugarRecord<TituloTesouro>{
     public void setTaxaCompra(String taxaCompra) {
         this.taxaCompra = taxaCompra;
     }
+
+    public String getDataUltimaAtualizacao() {
+        return dataUltimaAtualizacao;
+    }
+
+    public void setDataUltimaAtualizacao(String dataUltimaAtualizacao) {
+        this.dataUltimaAtualizacao = dataUltimaAtualizacao;
+    }
+    //endregion
 }

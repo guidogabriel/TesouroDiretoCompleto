@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+
+    <TextView
+        android:id="@+id/tv_nome_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="20dp"
+        android:text="teste"
+        android:textColor="@color/colorPrimarytext"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_id_titulo_remoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_nome_titulo"
+        android:textColor="@color/colorPrimarytext"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/tv_id_monitor_remoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_id_titulo_remoto"
+        android:textColor="@color/colorPrimarytext"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/tv_label_taxa_menor_que"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_nome_titulo"
+        android:layout_below="@+id/tv_nome_titulo"
+        android:text="Menor que: "
+        android:textColor="@color/colorSecondtext"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/ed_taxa_menor_que"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_label_taxa_menor_que"
+        android:layout_below="@+id/tv_nome_titulo"
+        android:layout_toRightOf="@id/tv_label_taxa_menor_que"
+        android:paddingTop="1dp"
+        android:textColor="@color/colorSecondtext"
+        android:textSize="12sp"
+        android:tag="menor_que"/>
+
+
+    <TextView
+        android:id="@+id/tv_label_taxa_maior_que"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nome_titulo"
+        android:layout_toLeftOf="@+id/ed_taxa_maior_que"
+        android:text="Maior que: "
+        android:textColor="@color/colorSecondtext"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/ed_taxa_maior_que"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_label_taxa_maior_que"
+        android:layout_below="@+id/tv_nome_titulo"
+        android:layout_marginRight="16dp"
+        android:paddingTop="1dp"
+        android:textColor="@color/colorSecondtext"
+        android:textSize="12sp"
+        android:tag="maior_que"/>
+
+
+    <View
+        android:id="@+id/vw_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_alignLeft="@+id/tv_label_preco_compra"
+        android:layout_below="@+id/tv_label_preco_venda"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorDivider" />
+</RelativeLayout>

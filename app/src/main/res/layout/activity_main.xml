@@ -6,17 +6,52 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/tb_main"
-        android:elevation="4dp"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
         android:layout_alignParentLeft="true"
-        />
-    <LinearLayout
-        android:id="@+id/rl_fragment_container"
-        android:orientation="vertical"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize" />
+
+    <RelativeLayout
+        android:id="@+id/ll_status_mercado"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb_main"
+        android:background="@color/colorPrimaryLight"
+        android:elevation="4dp">
+
+        <View
+            android:id="@+id/vw_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1.6dp"
+            android:background="@color/colorDivider"
+            />
+
+        <TextView
+            android:id="@+id/tv_status_mercado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:textSize="12sp"            />
+        <TextView
+            android:id="@+id/tv_ultima_atualizacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:textSize="12sp"            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/rl_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_status_mercado"
+        android:orientation="vertical"></LinearLayout>
 
 </RelativeLayout>
